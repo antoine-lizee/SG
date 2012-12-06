@@ -1,0 +1,33 @@
+classdef node < handle
+    %NODE Summary of this class goes here
+    %   Detailed explanation goes here
+    
+    properties
+        actualState;
+    end
+    
+    properties (SetAccess=private)
+        states;
+        statesType;        
+        previousState;
+    end
+    
+    methods
+        function obj=node(statesType_n, actualState_n)
+            if nargin==1
+                actualState_n=1;
+            end
+            obj.statesType=statesType_n;
+            obj.states=-statesType_n+1:2:statesType_n;            
+            obj.actualState=actualState_n;
+        end
+        function obj=set.actualState(obj,value)
+            obj.previousState=[obj.previousState obj.actualState];
+            obj.actualState=value;
+        end
+        function obj=flip(obj)
+           obj.actualState=-obj.actualState;
+        end
+    end
+end
+

@@ -1,0 +1,6 @@
+*.asv
+/*.mat
+/*/*.mat
+/ste*
+		#we need that because of the point in the filename
+!/*1_0-1*40.mat

@@ -1,0 +1,6 @@
+save('nNtempsync2000','nNtemp1')
+save('nNtempsync2000','nNtemp2','-append')
+save('nNtempsync2000','nNtemp3','-append')
+save('nNtempsync2000','nNtemp4','-append')
+save('nNtempsync2000','nNtemp5','-append')
+save('nNtempsync2000','M','-append')
